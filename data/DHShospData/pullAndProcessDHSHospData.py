@@ -70,7 +70,9 @@ class dhsHosp(object):
     def numNewHospsUS(self):
         EWs = self.ushospdata.EW
         MWs = self.ushospdata.MW
-        newHosps = self.ushospdata.total_adult_patients_hospitalized_confirmed_and_suspected_covid.diff()
+
+        self.ushospdata['adultAndChildDeaths'] = self.ushospdata.previous_day_admission_adult_covid_confirmed + self.ushospdata.previous_day_admission_pediatric_covid_confirmed
+        newHosps = self.ushospdata.adultAndChildDeaths.diff()
         return (EWs,MWs,newHosps) 
 
 def computeYticks(ys):
@@ -97,7 +99,7 @@ if __name__ == "__main__":
     ax.tick_params(which="both",labelsize=8)
 
     ax.set_xlabel("Epiweek", fontsize=10)
-    ax.set_ylabel("Num. of new adult confirmed/suspected US hosps.", fontsize=10)
+    ax.set_ylabel("Num. of previous day adult and child admissions\n to a US hosp. who had confirmed COVID-19", fontsize=10)
 
     ax.text(0.01, 0.99, "Data as recent as {:s}".format( hospData.metaDataDict['revision_timestamp'] )
             ,weight="bold",fontsize=10,ha="left",va="top", color="#3d3d3d",transform=ax.transAxes)
