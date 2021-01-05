@@ -112,7 +112,7 @@ if __name__ == "__main__":
     
     ax.tick_params(which="both",labelsize=8)
 
-    ax.set_xlabel("Date", fontsize=10)
+    ax.set_xlabel("Week ending on this date", fontsize=10)
     ax.set_ylabel("Weekly sum of the number of previous day\n adult and child admissions to a US hosp.\n who had confirmed COVID-19", fontsize=10)
 
     ax.text(0.01, 0.99, "Data as recent as {:s}".format( hospData.metaDataDict['revision_timestamp'] )
