@@ -4,13 +4,14 @@ import sys
 
 sys.path.append('../')
 from helperFuncs.timeAndDates import EWandMW 
+from helperFuncs.timeAndDates import buildDictionaryFromEW2EndDate
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from datetime import datetime 
+from datetime import datetime
 
 def mm2inch(x):
     return x/25.4
@@ -42,6 +43,9 @@ class JHUDeathData(object):
         
     def incidentDeaths(self):
         self.usTotalDeaths["incdeaths"] = self.usTotalDeaths.diff()["deaths"]
+        
+    def outputRawData(self):
+        self.deathdata_l.to_csv("./JHU_count_of_deaths.csv",index=False)
 
 def computeYticks(ys):
     ys = ys[~np.isnan(ys)]
@@ -53,8 +57,14 @@ if __name__ == "__main__":
     jhuDD = JHUDeathData()
     jhuDD.incidentDeaths()
 
+    # output raw data for forecasters
+    jhuDD.outputRawData()
+
     jhuNewDeaths = jhuDD.usTotalDeaths
     jhuNewDeaths = jhuNewDeaths.iloc[:-1,:]
+
+    # output processed data for forecasters
+    jhuNewDeaths.to_csv("jhuNewDeaths.csv")
 
     plt.style.use("fivethirtyeight")
 
@@ -64,19 +74,20 @@ if __name__ == "__main__":
 
     EWs = jhuNewDeaths.EW
     MWs = jhuNewDeaths.MW
+
+    fromEW2Date = buildDictionaryFromEW2EndDate(EWs)
     
-    ax.set_xticks(MWs[::5])
-    ax.set_xticklabels( [int(x) for x in EWs[::5]] )
- 
+    ax.set_xticks(list(MWs[::5])+[MWs.iloc[-1]])
+    ax.set_xticklabels( [ "{:s}".format(fromEW2Date[int(x)]) for x in list(EWs[::5]) + [EWs.iloc[-1]] ], rotation=45, ha="right" )
+    
     ax.tick_params(which="both",labelsize=8)
 
-    ax.set_xlabel("Epiweek", fontsize=10)
+    ax.set_xlabel("Date", fontsize=10)
     ax.set_ylabel("Num. of new deaths due to COVID-19", fontsize=10)
-
     
     utc = datetime.utcnow().date()
     
-    ax.text(0.01, 0.99, "Data as recent as {:d}-{:d}-{:d}".format( utc.year, utc.month, utc.day )
+    ax.text(0.01, 0.99, "Data as recent as {:04d}-{:02d}-{:02d}".format( utc.year, utc.month, utc.day )
             ,weight="bold",fontsize=10,ha="left",va="top", color="#3d3d3d",transform=ax.transAxes)
     
     ax.set_yticks( computeYticks(jhuNewDeaths.incdeaths) ) 
