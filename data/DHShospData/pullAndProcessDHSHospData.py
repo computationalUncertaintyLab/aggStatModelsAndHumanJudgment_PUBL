@@ -8,6 +8,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from epiweeks import Week
 
+sys.path.append('../')
+from helperFuncs.timeAndDates import buildDictionaryFromEW2EndDate
+
 def mm2inch(x):
     return x/25.4
 
@@ -83,7 +86,8 @@ def computeYticks(ys):
     ys = ys[~np.isnan(ys)]
     miny,maxy = min(ys),max(ys)
     return [int(y) for y in np.linspace( miny,maxy,10)]
-    
+
+       
 if __name__ == "__main__":
 
     hospData = dhsHosp()
@@ -101,26 +105,15 @@ if __name__ == "__main__":
     ax.scatter( MWs, numNewHospInUS,s=20 )
     ax.plot( MWs, numNewHospInUS, lw=3.,alpha=0.50 )
 
-
-    fromEW2Date = {}
-    for ew in EWs:
-        ew = str(int(ew))
-
-        yr,week = int(ew[:4]), int(ew[4:])
-
-        wk = Week(yr,week)
-        endDate = wk.enddate()
-        
-        fromEW2Date[int(ew)] = "{:04d}-{:02d}-{:02d}".format( endDate.year,endDate.month,endDate.day)
-    
-    ax.set_xticks(MWs[::5])
-    ax.set_xticklabels( [ "{:s}".format(fromEW2Date[int(x)]) for x in EWs[::5]], rotation=45, ha="right" )
-    
+    fromEW2Date = buildDictionaryFromEW2EndDate(EWs)
+   
+    ax.set_xticks(list(MWs[::5])+[MWs.iloc[-1]])
+    ax.set_xticklabels( [ "{:s}".format(fromEW2Date[int(x)]) for x in list(EWs[::5]) + [EWs.iloc[-1]] ], rotation=45, ha="right" )
     
     ax.tick_params(which="both",labelsize=8)
 
     ax.set_xlabel("Date", fontsize=10)
-    ax.set_ylabel("Num. of previous day adult and child admissions\n to a US hosp. who had confirmed COVID-19", fontsize=10)
+    ax.set_ylabel("Weekly sum of the number of previous day\n adult and child admissions to a US hosp.\n who had confirmed COVID-19", fontsize=10)
 
     ax.text(0.01, 0.99, "Data as recent as {:s}".format( hospData.metaDataDict['revision_timestamp'] )
             ,weight="bold",fontsize=10,ha="left",va="top", color="#3d3d3d",transform=ax.transAxes)
