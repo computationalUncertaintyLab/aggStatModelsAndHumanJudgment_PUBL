@@ -6,6 +6,7 @@ import pandas as pd
 
 import matplotlib.pyplot as plt
 import seaborn as sns
+from epiweeks import Week
 
 def mm2inch(x):
     return x/25.4
@@ -71,8 +72,8 @@ class dhsHosp(object):
         EWs = self.ushospdata.EW
         MWs = self.ushospdata.MW
 
-        self.ushospdata['adultAndChildDeaths'] = self.ushospdata.previous_day_admission_adult_covid_confirmed + self.ushospdata.previous_day_admission_pediatric_covid_confirmed
-        newHosps = self.ushospdata.adultAndChildDeaths.diff()
+        self.ushospdata['adultAndChildHosps'] = self.ushospdata.previous_day_admission_adult_covid_confirmed + self.ushospdata.previous_day_admission_pediatric_covid_confirmed
+        newHosps = self.ushospdata.adultAndChildHosps
         return (EWs,MWs,newHosps) 
 
 def computeYticks(ys):
@@ -93,12 +94,25 @@ if __name__ == "__main__":
     ax.scatter( MWs, numNewHospInUS,s=20 )
     ax.plot( MWs, numNewHospInUS, lw=3.,alpha=0.50 )
 
+
+    fromEW2Date = {}
+    for ew in EWs:
+        ew = str(int(ew))
+
+        yr,week = int(ew[:4]), int(ew[4:])
+
+        wk = Week(yr,week)
+        endDate = wk.enddate()
+        
+        fromEW2Date[int(ew)] = "{:04d}-{:02d}-{:02d}".format( endDate.year,endDate.month,endDate.day)
+    
     ax.set_xticks(MWs[::5])
-    ax.set_xticklabels( [int(x) for x in EWs[::5]] )
+    ax.set_xticklabels( [ "{:s}".format(fromEW2Date[int(x)]) for x in EWs[::5]], rotation=45, ha="right" )
+    
     
     ax.tick_params(which="both",labelsize=8)
 
-    ax.set_xlabel("Epiweek", fontsize=10)
+    ax.set_xlabel("Date", fontsize=10)
     ax.set_ylabel("Num. of previous day adult and child admissions\n to a US hosp. who had confirmed COVID-19", fontsize=10)
 
     ax.text(0.01, 0.99, "Data as recent as {:s}".format( hospData.metaDataDict['revision_timestamp'] )
@@ -112,5 +126,5 @@ if __name__ == "__main__":
     w = mm2inch(189)
     fig.set_size_inches(w,w/1.6)
     
-    plt.savefig("numbewOfNewHospitlizations.png")
+    plt.savefig("numberOfNewHospitlizations.png", dpi = 300)
     plt.close()
