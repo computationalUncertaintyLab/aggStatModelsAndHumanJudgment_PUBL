@@ -79,8 +79,8 @@ if __name__ == "__main__":
     
     ax.tick_params(which="both",labelsize=8)
 
-    ax.set_xlabel("Date", fontsize=10)
-    ax.set_ylabel("Num. of new cases due to COVID-19", fontsize=10)
+    ax.set_xlabel("Week ending on this date", fontsize=10)
+    ax.set_ylabel("Weekly sum of the num. of new cases\n due to COVID-19", fontsize=10)
 
     
     utc = datetime.utcnow().date()
