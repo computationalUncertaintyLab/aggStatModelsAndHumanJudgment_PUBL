@@ -74,7 +74,10 @@ class dhsHosp(object):
 
         self.ushospdata['adultAndChildHosps'] = self.ushospdata.previous_day_admission_adult_covid_confirmed + self.ushospdata.previous_day_admission_pediatric_covid_confirmed
         newHosps = self.ushospdata.adultAndChildHosps
-        return (EWs,MWs,newHosps) 
+        return (EWs,MWs,newHosps)
+
+    def outputRawData(self):
+        self.hospdata.to_csv("./raw_dhs_hospdata.csv",index=False)
 
 def computeYticks(ys):
     ys = ys[~np.isnan(ys)]
@@ -84,6 +87,10 @@ def computeYticks(ys):
 if __name__ == "__main__":
 
     hospData = dhsHosp()
+
+    # provide raw data
+    hospData.outputRawData()
+    
     EWs, MWs, numNewHospInUS = hospData.numNewHospsUS()
     EWs, MWs, numNewHospInUS  = EWs[:-1], MWs[:-1] , numNewHospInUS[:-1]
 
@@ -128,3 +135,4 @@ if __name__ == "__main__":
     
     plt.savefig("numberOfNewHospitlizations.png", dpi = 300)
     plt.close()
+
