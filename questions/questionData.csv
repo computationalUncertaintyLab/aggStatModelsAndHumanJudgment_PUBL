@@ -1,8 +1,172 @@
-﻿surveyNumber,questionNumber,launchDate,closeDate,questionText,resolutionText,metaculusURL,metaculusQuestionNumber
-1,1,1/6/21,1/16/21,What will be the number of new incident U.S. adult and pediatric previous day admissions to the hospital with confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,"This question will resolve as the total number of adult plus pediatric previous day admissions with confirmed COVID-19 as recorded in the Department of Health and Human Service’s report of COVID-19 reported patient impact and hospital capacity. The total previous day admissions is computed using two variables in this report: previous_day_admission_adult_covid_confirmed and previous_day_admission_pediatric_covid_confirmed. This report, and the resolution criteria, includes data on all 50 US states, Washington DC, Puerto Rico, and the US Virgin Islands (53 states and territories). The report will be accessed one week after the end of the month (2021-02-06).",https://pandemic.metaculus.com/questions/6160/new-us-hospital-admissions-24-30-january/,6160
-1,2,1/6/21,1/16/21,What will be the total number of new incident deaths due to COVID-19 in the US for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,This question will resolve as the number of new deaths due to confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive) as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated by week to generate the number of new deaths per week. The report will be accessed one week after the end of the month (2021-02-06).,https://pandemic.metaculus.com/questions/6161/new-us-covid-deaths-24-30-january/,6161
-1,3,1/6/21,1/16/21,What will be the number of new incident confirmed positive COVID-19 cases in the US beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,This question will resolve as the number of new confirmed cases beginning on 2021-01-24 and ending on 2021-01-30 (inclusive) recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of cases by county. From this file cases are summed across all counties and aggregated by week to generate the number of new cases per week. The report will be accessed one week after the end of the month (2021-02-06).,https://pandemic.metaculus.com/questions/6162/new-us-covid-cases-24-30-january/,6162
-1,4,1/6/21,1/16/21,What factor should the median 4-week-ahead COVIDhub Ensemble forecast of national incident deaths made on 4 Jan(a forecast for the 24-30 Jan week) be multiplied by so that it equals the reported number of new US incident deaths?,This question will resolve as the factor that the The COVID-19 Forecast Hub's “COVIDhub” Ensemble median forecast of the US national number of incident deaths 4 weeks into the future should be multiplied by (the reported number of incident deaths divided by the forecasted median) to equal the reported number of US national incident deaths as reported by the Johns Hopkins University (JHU) CSSE Github data repository.,https://pandemic.metaculus.com/questions/6163/factor-covidhub-forecast-to-be-multiplied-by/,6163
-1,5,1/6/21,1/16/21,What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if less than 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?,"The percent of the population that received a COVID-19 vaccine on or before 2021-03-01 will be computed by dividing the number of individuals who have initiated vaccine (1st dose taken) provided by the CDC COVID data tracker by the current US population which on 2021-01-04 was reported to be 330,782,991 and multiplying this fraction by 100. The CDC COVID data tracker that counts the number of individuals who have initialized vaccination will be accessed when data is available after and as close as possible to 2021-03-01. To resolve deaths, we will use the cumulative number of deaths due to confirmed COVID-19 as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated to week to generate the number of new deaths per week. The report will be accessed one week after 2021-12-31. 9 January edit: This question will resolve ambiguously if greater than or equal to 50% of Americans are vaccinated by 2021-03-01.",https://pandemic.metaculus.com/questions/6165/number-of-us-covid-deaths-if-50-vaccinated/,6165
-1,6,1/6/21,1/16/21,What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if greater than or equal to 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?,"The percent of the population that received a COVID-19 vaccine on or before 2021-03-01 will be computed by dividing the number of individuals who have initiated vaccine (1st dose taken) provided by the CDC COVID data tracker by the current US population which on 2021-01-04 was reported to be 330,782,991 and multiplying this fraction by 100. The CDC COVID data tracker that counts the number of individuals who have initialized vaccination will be accessed when data is available after and as close as possible to 2021-03-01.",https://pandemic.metaculus.com/questions/6164/number-of-covid-deaths-if-50-vaccinated/,6164
-1,7,1/6/21,1/16/21,What will be the percent of B.1.1.7 among all S gene dropout SARS-CoV-2 samples submitted for genomic sequencing surveillance in the US between 2021-02-01 and 2021-02-15?,"This NextStrain page on S:N501Y as a proportion of overall S gene dropout samples in the US will be consulted for resolution. To access this data, scroll to the bottom of the page and download “selected metadata.” In this Excel sheet, please consult the “Pangolin Lineage” column to find B.1.1.7 samples. Samples that have a “collection data” date between 2021-02-01 and 2021-02-15 (inclusive) will be considered. We will compute the proportion by dividing the number of B.1.1.7 samples by the total number of samples (which are all 69del samples) in the spreadsheet. NextStrain will be accessed in the last week of February (the week ending on 2021-02-27) for resolution.",https://pandemic.metaculus.com/questions/6166/-b117-among-all-s-gene-dropout-samples/,6166
+﻿surveyNumber,questionNumber,launchDate,closeDate,headlineQuestionText,questionText,resolutionText,metaculusURL,metaculusQuestionNumber
+1,1,1/6/21,1/16/21,What will be the number of new incident U.S. adult and pediatric previous day admissions to the hospital with confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,"New U.S. COVID hospital admissions 24-30 Jan?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+Changes in the number of hospitalizations due to COVID-19 is caused, in part, by how the healthcare system manages infections, differences in populations susceptible to the virus, and adjustments to how the infectious disease is treated. The CDC estimates that seasonal influenza in the US during the 2019-2020 season was responsible for 38 million illnesses, 18 million medical visits, 405,000 hospitalizations, and 22,000 deaths. Public health officials may adjust mitigation efforts and/or adjust policies in response to a predicted increase or decrease in expected number of hospitalizations.
+
+A plot of the current number of new incident adult and pediatric previous day admissions to the hospital with confirmed COVID-19 over time can be found here and the raw data used to generate this plot can be found here.
+
+Data sources and more information:
+
+Department of Health and Human Service’s report of COVID-19 reported patient impact and hospital capacity
+COVID-19 Guidance for Hospital Reporting and FAQs
+The CDC’s COVIDView website
+The CDC’s Hospitalization forecasts website
+The Coronavirus Associated Hospitalization Surveillance Network (COVID-NET) website
+Data on Hospitalizations and Death by Age
+Data on Hospitalization and Death by Race/Ethnicity
+Morbidity and Mortality Weekly Reports
+The Atlantic’s COVIDtracking project
+Data from John Hopkins University CSSEE COVID-19 Dataset
+The COVID-19 ForecastHub
+What will be the number of new incident U.S. adult and pediatric previous day admissions to the hospital with confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?
+
+This question will resolve as the total number of adult plus pediatric previous day admissions with confirmed COVID-19 as recorded in the Department of Health and Human Service’s report of COVID-19 reported patient impact and hospital capacity. The total previous day admissions is computed using two variables in this report: previous_day_admission_adult_covid_confirmed and previous_day_admission_pediatric_covid_confirmed. This report, and the resolution criteria, includes data on all 50 US states, Washington DC, Puerto Rico, and the US Virgin Islands (53 states and territories). The report will be accessed one week after the end of the month (2021-02-06).","This question will resolve as the total number of adult plus pediatric previous day admissions with confirmed COVID-19 as recorded in the Department of Health and Human Service’s report of COVID-19 reported patient impact and hospital capacity. The total previous day admissions is computed using two variables in this report: previous_day_admission_adult_covid_confirmed and previous_day_admission_pediatric_covid_confirmed. This report, and the resolution criteria, includes data on all 50 US states, Washington DC, Puerto Rico, and the US Virgin Islands (53 states and territories). The report will be accessed one week after the end of the month (2021-02-06).",https://pandemic.metaculus.com/questions/6160/new-us-hospital-admissions-24-30-january/,6160
+1,2,1/6/21,1/16/21,What will be the total number of new incident deaths due to COVID-19 in the US for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,"New U.S. COVID deaths 24-30 January?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+The number of new deaths due to COVID-19 is one factor that contributes to the burden of a disease. The CDC estimates that seasonal influenza between 10/2019 and 04/2020 caused 24,000 to 62,000 deaths in total. Changes in the disease burden indicate to public health officials whether past interventions have effectively reduced the spread of SARS-CoV-2 and impact of COVID-19.
+
+A plot of the current number of new incident deaths due to COVID-19 in the US over time using data from the JHU CSSE group can be found here and the raw data used to generate this plot can be found here.
+
+Data sources and more information:
+
+The CDC’s COVIDView website
+Morbidity and Mortality Weekly Reports
+Data on Hospitalizations and Death by Age
+Data on Hospitalizations and Death by Race/Ethnicity
+The National Center for Health Statistics count of deaths
+CDC’s US COVID19 Cases and Deaths by State over time
+The Atlantic’s COVIDtracking project
+Data from John Hopkins University CSSEE COVID-19 Dataset
+The COVID-19 ForecastHub
+What will be the total number of new incident deaths due to COVID-19 in the US for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?
+
+This question will resolve as the number of new deaths due to confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive) as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated by week to generate the number of new deaths per week. The report will be accessed one week after the end of the month (2021-02-06).
+
+Categories: Consensus Forecasting to Improve Public Health",This question will resolve as the number of new deaths due to confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive) as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated by week to generate the number of new deaths per week. The report will be accessed one week after the end of the month (2021-02-06).,https://pandemic.metaculus.com/questions/6161/new-us-covid-deaths-24-30-january/,6161
+1,3,1/6/21,1/16/21,What will be the number of new incident confirmed positive COVID-19 cases in the US beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,"New U.S. COVID cases 24-30 January?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+The number of new positive SARS-CoV-2 cases can indicate the degree to which the virus is transmitted in a population. If public health officials observe an increase in the number of new cases they may ask, at a federal or state level, to increase test production to measure the degree to which the virus has spread and increase restrictions to prevent spread of the infectious agent. The US Outpatient Influenza-like illness Surveillance network (ILINet) has reported on 2020-12-26 that 1.6% of patient visits have influenza-like illness compared to a national baseline of 2.6%. The number of new COVID-19 cases in the US as reported by the JHU CSSE group as of 2021-01-05 was 1.434M.
+
+A plot of the current number of new incident confirmed positive COVID-19 cases in the US over time using data from the JHU CSSE group can be found here and the raw data used to generate this plot can be found here.
+
+Data sources and more information:
+
+The Atlantic’s COVIDtracking project
+Data from John Hopkins University CSSEE COVID-19 Dataset
+The COVID-19 ForecastHub
+CDC’s US COVID19 Cases and Deaths by State over time
+The Latest Map and Case count by the NY Times
+What will be the number of new incident confirmed positive COVID-19 cases in the US beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?
+
+This question will resolve as the number of new confirmed cases beginning on 2021-01-24 and ending on 2021-01-30 (inclusive) recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of cases by county. From this file cases are summed across all counties and aggregated by week to generate the number of new cases per week. The report will be accessed one week after the end of the month (2021-02-06).
+
+Categories: Consensus Forecasting to Improve Public Health",This question will resolve as the number of new confirmed cases beginning on 2021-01-24 and ending on 2021-01-30 (inclusive) recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of cases by county. From this file cases are summed across all counties and aggregated by week to generate the number of new cases per week. The report will be accessed one week after the end of the month (2021-02-06).,https://pandemic.metaculus.com/questions/6162/new-us-covid-cases-24-30-january/,6162
+1,4,1/6/21,1/16/21,What factor should the median 4-week-ahead COVIDhub Ensemble forecast of national incident deaths made on 4 Jan(a forecast for the 24-30 Jan week) be multiplied by so that it equals the reported number of new US incident deaths?,"Factor COVIDhub forecast to be multiplied by?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+The COVID-19 Forecast Hub stores forecasts of incident and cumulative deaths due to COVID-19 and incident confirmed cases from more than 50 individual models. Forecasts are 1, 2, 3, and 4 weeks into the future. In addition to storing probabilistic predictions from individual forecasts, the The COVID-19 Forecast Hub produces an ensemble forecast that is an equally weighted average of individual forecasts. The goal of the The COVID-19 Forecast Hub is to support public health decision making at the state and federal level by providing forecasts of key indicators of disease burden. An accurate ensemble forecast will help public health decision makers decide what actions to take to prevent the spread of SARS-CoV-2 and reduce the impact of COVID-19, and increase public health officials’ confidence in the ability of statistical models to predict the trajectory of an infectious outbreak in the US.
+
+Based on data from the The COVID-19 Forecast Hub, 4 week ahead median forecasts between the dates 2020-06-08 and 2020-12-07 (a 4 week ahead forecast for 2021-01-02) of incident deaths should be multiplied by 1.18 on average (standard deviation = 0.26). The data and code used to compute this is available here.
+
+What factor should the 4 week ahead median forecast of national incident deaths made on 2021-01-04 (a forecast for the week beginning on 2021-01-24 and ending on 2021-01-30) by the The COVID-19 Forecast Hub “COVIDhub” Ensemble be multiplied by so that it equals the reported number of US national incident deaths? (a factor less than 1 means the forecast is an overestimate and factors above 1 mean the forecast is an underestimate).
+
+Data sources and more information:
+
+The COVID-19 Forecast Hub
+The CDC’s COVIDView website
+Morbidity and Mortality Weekly Reports
+Data on Hospitalizations and Death by Age
+Data on Hospitalizations and Death by Race/Ethnicity
+The National Center for Health Statistics count of deaths
+CDC’s US COVID19 Cases and Deaths by State over time
+The Atlantic’s COVIDtracking project
+Data from John Hopkins University CSSEE COVID-19 Dataset
+What factor should the median 4-week-ahead COVIDhub Ensemble forecast of national incident deaths made on 4 Jan(a forecast for the 24-30 Jan week) be multiplied by so that it equals the reported number of new US incident deaths?
+
+This question will resolve as the factor that the The COVID-19 Forecast Hub's “COVIDhub” Ensemble median forecast of the US national number of incident deaths 4 weeks into the future should be multiplied by (the reported number of incident deaths divided by the forecasted median) to equal the reported number of US national incident deaths as reported by the Johns Hopkins University (JHU) CSSE Github data repository.
+
+Categories: Consensus Forecasting to Improve Public Health",This question will resolve as the factor that the The COVID-19 Forecast Hub's “COVIDhub” Ensemble median forecast of the US national number of incident deaths 4 weeks into the future should be multiplied by (the reported number of incident deaths divided by the forecasted median) to equal the reported number of US national incident deaths as reported by the Johns Hopkins University (JHU) CSSE Github data repository.,https://pandemic.metaculus.com/questions/6163/factor-covidhub-forecast-to-be-multiplied-by/,6163
+1,5,1/6/21,1/16/21,What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if less than 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?,"Number of US COVID deaths if <50% vaccinated?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+The FDA has authorized two vaccines to prevent infection by SARS-CoV-2 — the virus that causes COVID-19. The CDC has recommended that the first recipients of the vaccines should be healthcare workers and residents of long-term care facilities.
+
+One goal of a vaccine is herd immunity: inoculating a large enough proportion of susceptible individuals to prevent infections to those who have not been inoculated. Herd immunity depends on many factors, but in large part on the efficacy of the vaccine and the proportion of susceptible individuals who are inoculated. Pfizer has reported their vaccine is potentially 95% efficacious at preventing an infection and Moderna announced a vaccine efficacy of 94.1%. An available vaccine is voluntary and recent reports suggest only about 71% of the population may be willing to be inoculated.
+
+Data sources and more information:
+
+The COVID-19 ForecastHub
+The CDC’s COVIDView website
+Morbidity and Mortality Weekly Reports
+Data on Hospitalizations and Death by Age
+Data on Hospitalizations and Death by Race/Ethnicity
+The National Center for Health Statistics count of deaths
+CDC’s US COVID19 Cases and Deaths by State over time
+The Atlantic’s COVIDtracking project
+Data from John Hopkins University CSSEE COVID-19 Dataset
+A side-by-side comparison of the Pfizer/BioNTech and Moderna vaccines
+KFF COVID-19 Vaccine Monitor: December 2020
+What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if less than 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?
+
+The percent of the population that received a COVID-19 vaccine on or before 2021-03-01 will be computed by dividing the number of individuals who have initiated vaccine (1st dose taken) provided by the CDC COVID data tracker by the current US population which on 2021-01-04 was reported to be 330,782,991 and multiplying this fraction by 100. The CDC COVID data tracker that counts the number of individuals who have initialized vaccination will be accessed when data is available after and as close as possible to 2021-03-01.
+
+To resolve deaths, we will use the cumulative number of deaths due to confirmed COVID-19 as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated to week to generate the number of new deaths per week. The report will be accessed one week after 2021-12-31.
+
+9 January edit: This question will resolve ambiguously if greater than or equal to 50% of Americans are vaccinated by 2021-03-01.
+
+Categories: Consensus Forecasting to Improve Public Health","The percent of the population that received a COVID-19 vaccine on or before 2021-03-01 will be computed by dividing the number of individuals who have initiated vaccine (1st dose taken) provided by the CDC COVID data tracker by the current US population which on 2021-01-04 was reported to be 330,782,991 and multiplying this fraction by 100. The CDC COVID data tracker that counts the number of individuals who have initialized vaccination will be accessed when data is available after and as close as possible to 2021-03-01. To resolve deaths, we will use the cumulative number of deaths due to confirmed COVID-19 as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated to week to generate the number of new deaths per week. The report will be accessed one week after 2021-12-31. 9 January edit: This question will resolve ambiguously if greater than or equal to 50% of Americans are vaccinated by 2021-03-01.",https://pandemic.metaculus.com/questions/6165/number-of-us-covid-deaths-if-50-vaccinated/,6165
+1,6,1/6/21,1/16/21,What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if greater than or equal to 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?,"Number of US COVID deaths if >50% vaccinated?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+The FDA has authorized two vaccines to prevent infection by SARS-CoV-2 — the virus that causes COVID-19. The CDC has recommended that the first recipients of the vaccines should be healthcare workers and residents of long-term care facilities.
+
+One goal of a vaccine is herd immunity: inoculating a large enough proportion of susceptible individuals to prevent infections to those who have not been inoculated. Herd immunity depends on many factors, but in large part on the efficacy of the vaccine and the proportion of susceptible individuals who are inoculated. Pfizer has reported their vaccine is potentially 95% efficacious at preventing an infection and Moderna announced a vaccine efficacy of 94.1%. An available vaccine is voluntary and recent reports suggest only about 71% of the population may be willing to be inoculated.
+
+Data sources and more information:
+
+The COVID-19 ForecastHub
+The CDC’s COVIDView website
+Morbidity and Mortality Weekly Reports
+Data on Hospitalizations and Death by Age
+Data on Hospitalizations and Death by Race/Ethnicity
+The National Center for Health Statistics count of deaths
+CDC’s US COVID19 Cases and Deaths by State over time
+The Atlantic’s COVIDtracking project
+Data from John Hopkins University CSSEE COVID-19 Dataset
+A side-by-side comparison of the Pfizer/BioNTech and Moderna vaccines
+KFF COVID-19 Vaccine Monitor: December 2020
+What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if greater than or equal to 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?
+
+The percent of the population that received a COVID-19 vaccine on or before 2021-03-01 will be computed by dividing the number of individuals who have initiated vaccine (1st dose taken) provided by the CDC COVID data tracker by the current US population which on 2021-01-04 was reported to be 330,782,991 and multiplying this fraction by 100. The CDC COVID data tracker that counts the number of individuals who have initialized vaccination will be accessed when data is available after and as close as possible to 2021-03-01.
+
+To resolve deaths, we will use the cumulative number of deaths due to confirmed COVID-19 as recorded in the Johns Hopkins University (JHU) CSSE Github data repository. This file records the daily number of deaths by county. From this file deaths are summed across all counties and aggregated to week to generate the number of new deaths per week. The report will be accessed one week after 2021-12-31.
+
+9 January edit: This question will resolve ambiguously if less than 50% of Americans are vaccinated by 2021-03-01.
+
+Categories: Consensus Forecasting to Improve Public Health","The percent of the population that received a COVID-19 vaccine on or before 2021-03-01 will be computed by dividing the number of individuals who have initiated vaccine (1st dose taken) provided by the CDC COVID data tracker by the current US population which on 2021-01-04 was reported to be 330,782,991 and multiplying this fraction by 100. The CDC COVID data tracker that counts the number of individuals who have initialized vaccination will be accessed when data is available after and as close as possible to 2021-03-01.",https://pandemic.metaculus.com/questions/6164/number-of-covid-deaths-if-50-vaccinated/,6164
+1,7,1/6/21,1/16/21,What will be the percent of B.1.1.7 among all S gene dropout SARS-CoV-2 samples submitted for genomic sequencing surveillance in the US between 2021-02-01 and 2021-02-15?,"% B.1.1.7 among all S gene dropout samples?
+Created by juancambeiro. Opened on Jan 6, 2021.
+Cross-posted on Metaculus.
+SARS-CoV-2 lineage B.1.1.7, otherwise known as Variant of Concern 202012/01 (VOC), is a novel SARS-CoV-2 strain that originated in the United Kingdom in late summer/early fall 2020. A recent pre-print estimates B.1.1.7 to be 56% more transmissible (95% Crl: 50%-74%) compared to preexisting variants. A second pre-print finds that the new variant has “an additive increase in R that ranged between 0.4 and 0.7, and alternatively as a multiplicative increase in R that ranged between 50% and 75%.""
+
+The B.1.1.7 strain is characterized by 17 new mutations. One of these mutations, S.H69- (a deletion of H69), can be detected via PCR diagnostic testing. If the PCR test shows an S gene dropout, where the S probe of the RT-PCR test cannot bind to the S gene due to B.1.1.7's H69 deletion, then the sample has the potential to be the B.1.1.7 strain — at that point, further sequencing would be needed to determine if a second mutation is present: the N501Y (S:N501Y) mutation.
+
+In the UK, B.1.1.7 is so widespread that a PCR test that shows S-gene dropout alone is a strong indicator the sample is the B.1.1.7 variant — recent data indicates ~98% of S gene dropout samples in the UK are B.1.1.7. To date, B.1.1.7 is not widespread enough in the United States to consider a sample with a S gene dropout synonymous with the B.1.1.7 variant.
+
+As of 2020-01-04, the genomic repository and analysis platform NextStrain, which uses viral samples submitted to GISAID, reported 381 samples with an S-gene dropout (S.H69-) have been sequenced and uploaded in the United States. Among samples with an S-gene dropout in the U.S., 1.84% (7/381) percent were identified as B.1.1.7 in a NextStrain/GISAID database maintained by the Neher Lab. Please note that there is a lag between sequence collection and sequence upload — so the number of sequences to date will be backfilled once those sequences are uploaded.
+
+Data sources and more information:
+
+The Global Initiative on Sharing Avian Influenza Data (GISAID) website
+Nextstrain
+S gene dropout patterns in SARS-CoV-2 tests suggest spread of the H69del/V70del mutation in the US
+Preliminary genomic characterisation of an emergent SARS-CoV-2 lineage in the UK defined by a novel set of spike mutations
+Mutations arising in SARS-CoV-2 spike on sustained human-to-human transmission and human-to-animal passage
+What will be the percent of B.1.1.7 among all S gene dropout SARS-CoV-2 samples submitted for genomic sequencing surveillance in the US between 2021-02-01 and 2021-02-15?
+
+This NextStrain page on S:N501Y as a proportion of overall S gene dropout samples in the US will be consulted for resolution. To access this data, scroll to the bottom of the page and download “selected metadata.” In this Excel sheet, please consult the “Pangolin Lineage” column to find B.1.1.7 samples. Samples that have a “collection data” date between 2021-02-01 and 2021-02-15 (inclusive) will be considered. We will compute the proportion by dividing the number of B.1.1.7 samples by the total number of samples (which are all 69del samples) in the spreadsheet. NextStrain will be accessed in the last week of February (the week ending on 2021-02-27) for resolution.
+
+Categories: Consensus Forecasting to Improve Public Health","This NextStrain page on S:N501Y as a proportion of overall S gene dropout samples in the US will be consulted for resolution. To access this data, scroll to the bottom of the page and download “selected metadata.” In this Excel sheet, please consult the “Pangolin Lineage” column to find B.1.1.7 samples. Samples that have a “collection data” date between 2021-02-01 and 2021-02-15 (inclusive) will be considered. We will compute the proportion by dividing the number of B.1.1.7 samples by the total number of samples (which are all 69del samples) in the spreadsheet. NextStrain will be accessed in the last week of February (the week ending on 2021-02-27) for resolution.",https://pandemic.metaculus.com/questions/6166/-b117-among-all-s-gene-dropout-samples/,6166
