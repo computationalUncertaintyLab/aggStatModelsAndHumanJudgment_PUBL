@@ -24,3 +24,15 @@ Questions and comments can be sent to thomas mcandrew (mcandrew@lehigh.edu)
 
 ## Funding / Support
 This research is supported through the MIDAS Coordination Center (MIDASNI2020- 1) by a grant from the National Institute of General Medical Science (3U24GM132013-02S2).
+
+## Licensing
+Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
