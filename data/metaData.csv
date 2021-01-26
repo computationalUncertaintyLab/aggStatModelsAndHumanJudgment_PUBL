@@ -1,0 +1,8 @@
+surveynum,numOfPredictions,question,qid,publishtime,closetime,numcomments,numvotes
+1,109,What factor should the median 4-week-ahead COVIDhub Ensemble forecast made on 4 Jan(a forecast for the 24-30 Jan week) be multiplied by so that it equals the reported number of new US incident deaths?,6163,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,3,5
+1,86,What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if greater than or equal to 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?,6164,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,10,9
+1,97,What will be the percent of B.1.1.7 among all S gene dropout SARS-CoV-2 samples submitted for genomic sequencing surveillance in the US between 2021-02-01 and 2021-02-15?,6166,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,1,8
+1,111,What will be the cumulative number of deaths due to COVID-19 on 2021-12-31 if less than 50% of Americans initiate vaccination (1st dose received) with a COVID-19 vaccine by 2021-03-01?,6165,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,5,6
+1,149,What will be the total number of new incident deaths due to COVID-19 in the US for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,6161,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,6,6
+1,112,What will be the number of new confirmed positive COVID-19 cases in the US beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,6162,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,0,9
+1,115,What will be the number of new U.S. adult and pediatric previous day admissions to the hospital with confirmed COVID-19 for the week beginning on 2021-01-24 and ending on 2021-01-30 (inclusive)?,6160,2021-01-06T19:00:00Z,2021-01-16T19:00:00Z,0,8
