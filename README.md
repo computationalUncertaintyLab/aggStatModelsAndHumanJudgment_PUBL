@@ -19,6 +19,10 @@ Report Number | Dates conducted | PDF | press
 Report Number | Dates conducted | PDF | press
 -- | -- | --| ---
 
+## Data / Predictions
+
+Data and predictions are available in the [data](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/tree/main/data) folder and posted on the Harvard Dataverse at the foloowing URL = https://dataverse.harvard.edu/dataverse/aggregating_statistical_models_and_human_judgment
+
 ## Contact information
 Questions and comments can be sent to thomas mcandrew (mcandrew@lehigh.edu)
 
