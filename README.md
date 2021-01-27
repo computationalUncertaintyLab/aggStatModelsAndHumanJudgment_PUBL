@@ -11,7 +11,7 @@ Human judgment has the potential to reduce the COVID-19 burden on the US in two 
 
 Report Number | Dates conducted | PDF | press
 -- | -- | --| ---
-
+01 | 2021-01-06 to 2021-01-16 | [Summary Report 01](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport01/MetaandConsensusForecastOfCOVID-19Targets.pdf) | 
 
 
 ## Reports on potentially effective interventions to guide public health decision making
