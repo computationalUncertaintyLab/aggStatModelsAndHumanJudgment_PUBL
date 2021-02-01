@@ -63,6 +63,15 @@ if __name__ == "__main__":
     jhuNewDeaths = jhuDD.usTotalDeaths
     jhuNewDeaths = jhuNewDeaths.iloc[:-1,:]
 
+    past4weeks = jhuNewDeaths.incdeaths.iloc[-4:].values
+    mn = np.mean(past4weeks)
+    sd = np.std(past4weeks)
+    
+    print("Range of New Deaths for the past 4 weeks")
+    print("Mean = {:.2f} and SD = {:.2f}".format(mn,sd) )
+    print("Mn-sigma = {:.2f}, mean + 5 sigmaS = {:.2f}".format(mn-5*sd,mn+5*sd) )
+ 
+
     # output processed data for forecasters
     jhuNewDeaths.to_csv("jhuNewDeaths.csv")
 
