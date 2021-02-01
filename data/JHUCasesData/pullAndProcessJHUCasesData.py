@@ -62,6 +62,15 @@ if __name__ == "__main__":
     jhuNewCases = jhuDD.usTotalCases
     jhuNewCases = jhuNewCases.iloc[:-1,:]
 
+    past4weeks = jhuNewCases.inccases.iloc[-4:].values
+    mn = np.mean(past4weeks)
+    sd = np.std(past4weeks)
+    
+    print("Range of New Cases for the past 4 weeks")
+    print("Mean = {:.2f} and SD = {:.2f}".format(mn,sd) )
+    print("Mn-sigma = {:.2f}, mean + 5 sigmaS = {:.2f}".format(mn-5*sd,mn+5*sd) )
+    print("Mn-sigma = {:.2f}, mean + 5 sigmaS = {:.2f}".format(mn-10*sd,mn+10*sd) )
+
     plt.style.use("fivethirtyeight")
 
     fig,ax = plt.subplots()
