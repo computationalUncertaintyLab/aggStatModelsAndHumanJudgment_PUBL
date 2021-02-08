@@ -11,13 +11,14 @@ Human judgment has the potential to reduce the COVID-19 burden on the US in two 
 
 Report Number | Dates conducted | PDF | press
 -- | -- | --| ---
-01 | 2021-01-06 to 2021-01-16 | [Summary Report 01](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport01/MetaandConsensusForecastOfCOVID-19Targets.pdf) | 
+01 | 2021-01-06 to 2021-01-16 | [Summary Report 01](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport01/MetaandConsensusForecastOfCOVID-19Targets.pdf) | [Lehigh News](https://www2.lehigh.edu/news/forecast-25000-fewer-us-covid-deaths-if-half-the-population-initiates-vaccination-by-march-1)
 
 
 ## Reports on potentially effective interventions to guide public health decision making
 
 Report Number | Dates conducted | PDF | press
 -- | -- | --| ---
+01 | 2021-01-07 to 2021-01-28 | [Summary Report 01](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/raw/main/OptimalActionReports/Jan2021/2021-01_OptAction.pdf)
 
 ## Data / Predictions
 
