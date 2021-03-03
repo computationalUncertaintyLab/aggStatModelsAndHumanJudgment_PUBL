@@ -70,6 +70,13 @@ class dhsHosp(object):
             RW = RW+1
             n+=1
         return n-1
+
+    def adultChildHospsLast2days(self):
+        data = self.rawdata
+        data["adultAndChildHosps"] = data["previous_day_admission_adult_covid_confirmed"] + data["previous_day_admission_pediatric_covid_confirmed"]
+        data = data.loc[:,["date","adultAndChildHosps"]]
+        data["prevHosps"] = data.adultAndChildHosps.cumsum()
+        print(data)
         
     def numNewHospsUS(self):
         EWs = self.ushospdata.EW
@@ -91,6 +98,8 @@ def computeYticks(ys):
 if __name__ == "__main__":
 
     hospData = dhsHosp()
+
+    hospData.adultChildHospsLast2days()
 
     # provide raw data
     hospData.outputRawData()
