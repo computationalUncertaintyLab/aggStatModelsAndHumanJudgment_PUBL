@@ -24,7 +24,9 @@ class dhsHosp(object):
     # - data pull
     def grabMetaData(self):
         import requests
-        metadata = requests.get("https://healthdata.gov/api/3/action/package_show?id=83b4a668-9321-4d8c-bc4f-2bef66c49050&page=0")
+        # TODO this code uses an API format that is being retired... need to port to the new API... but the legacy url
+        # will work for a few weeks... 
+        metadata = requests.get("https://legacy.healthdata.gov/api/3/action/package_show?id=83b4a668-9321-4d8c-bc4f-2bef66c49050&page=0")
         metaDataDict = metadata.json()
         if metaDataDict['success']:
             metaDataDict = metaDataDict['result'][0]
