@@ -19,7 +19,7 @@ Report Number | Dates conducted | PDF | press
 Report Number | Dates conducted | PDF | press
 -- | -- | --| ---
 01 | 2021-01-07 to 2021-01-28 | [Summary Report 01](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/raw/main/OptimalActionReports/Jan2021/2021-01_OptAction.pdf)
-
+02 |2021-02-12 to 2021-02-26 | [Summary Report 02](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/OptimalActionReports/Feb2021/2021-02_OptAction.pdf)
 
 ## Data / Predictions
 
