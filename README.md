@@ -16,6 +16,7 @@ Report Number | Dates conducted | PDF | press
 03 |2021-03-04 to 2021-03-15 | [Summary Report 03](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport03/MetaAndConsensusForecastOfCOVID-19Targets_Mar_v0.4.pdf)|
 04 |2021-04-07 to 2021-04-20 | [Summary Report 04](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport04/MetaAndConsensusForecastOfCOVID-19Targets_Apr_v0.2.pdf)|
 05 |2021-05-05 to 2021-05-18 | [Summary Report 05](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport05/MetaAndConsensusForecastOfCOVID-19Targets_May_v0.2.pdf)|
+06 |2021-06-02 to 2021-06-16 | [Summary Report 06](https://github.com/computationalUncertaintyLab/aggStatModelsAndHumanJudgment_PUBL/blob/main/summaryreports/summaryReport06/MetaAndConsensusForecastOfCOVID-19Targets_June.pdf)|
 
 
 ## Reports on potentially effective interventions to guide public health decision making
